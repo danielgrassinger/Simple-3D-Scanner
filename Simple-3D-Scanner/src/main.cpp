@@ -7,11 +7,15 @@
 
 #include<iostream>
 
-using namespace std;
+#include "opencv2/core/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
 
 
 int main(int argc, char argv[]){
-	cout << "Hallo Welt" << endl;
 
+	cv::Mat image = cv::imread("im.jpg");
+	cv::neamedWindow("My Image");
+	cv::imshow("My Image",image);
+	cv::waitKey(5000);
 	return 0;
 }
