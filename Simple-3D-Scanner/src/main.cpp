@@ -11,7 +11,7 @@
 //include "opencv2/highgui/highgui.hpp"
 
 
-int main(int argc, char argv[]){
+int main(int argc, char *argv[]){
 	/*
 	cv::Mat image = cv::imread("im.jpg");
 	cv::neamedWindow("My Image");
