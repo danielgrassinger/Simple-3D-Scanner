@@ -1,24 +1,25 @@
-/*
- * main.cpp
- *
- *  Created on: 29.12.2015
- *      Author: daniel
- */
+#include <stdio.h>
+#include <opencv2/opencv.hpp>
 
-#include<iostream>
+using namespace cv;
 
-//include "opencv2/core/core.hpp"
-//include "opencv2/highgui/highgui.hpp"
+int main(int argc, char** argv )
+{
 
 
-int main(int argc, char *argv[]){
-	/*
-	cv::Mat image = cv::imread("im.jpg");
-	cv::neamedWindow("My Image");
-	cv::imshow("My Image",image);
-	cv::waitKey(5000);
-	*/
+    Mat image;
+    image = imread( "/home/daniel/Bilder/gray-backtrack-wallpaper.jpg", 1 );
 
-	std::cout << "Hallo Welt!xx!" << std::endl;
-	return 0;
+    if ( !image.data )
+    {
+        printf("No image data \n");
+        return -1;
+    }
+
+    namedWindow("Display Image", WINDOW_AUTOSIZE );
+    imshow("Display Image", image);
+
+    waitKey(0);
+
+    return 0;
 }

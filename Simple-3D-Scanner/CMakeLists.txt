@@ -1,4 +1,6 @@
-cmake_minimum_required (VERSION 2.6)
+cmake_minimum_required (VERSION 2.8)
 project (Simple-3D-Scanner)
+find_package( OpenCV REQUIRED )
 include_directories ("${PROJECT_SOURCE_DIR}/src")
 add_executable (Simple-3D-Scanner main.cpp)
+target_link_libraries( Simple-3D-Scanner ${OpenCV_LIBS} )
